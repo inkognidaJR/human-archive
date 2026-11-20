@@ -389,7 +389,7 @@ body{
 }
 }
 
-    &__acquire{
+    .citizen__acquire{
     @include warning-number-font;
     background-color: $accent-dark;
     border: 1px solid $accent-red;
@@ -402,7 +402,7 @@ body{
     }
 }
 
-    &__price{
+    .citizen__price{
     @include regular-text;
     color: $text-secondary;
 
@@ -411,7 +411,7 @@ body{
     }
 }
 
-    &__auction{
+.citizez__auction{
     background-color: $bg-card;
     border: 1px solid $border-color;
     padding: 20px;

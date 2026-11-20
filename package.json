@@ -1,0 +1,17 @@
+{
+  "name": "xznepridymal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "dev": "concurrently \"vite --open /pupupu.html\" \"sass --watch pampam.scss:pampam.css\"",
+  "scss": "sass --watch pampam.scss:pampam.css"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^10.0.7",
+    "sass": "^1.108.2"
+  }
+}

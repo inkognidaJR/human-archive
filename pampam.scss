@@ -1,0 +1,468 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist+Pixel&display=swap');
+
+// COLOR
+$bg-main:#0D0D0B;
+$bg-card:#171713;
+$text-primary:#C4BDA8;
+$accent-red:#8F2925;
+$accent-dark:#542522;
+$accent-yellow:#A18D58;
+$border-color:#39372F;
+$text-secondary:#777568;
+
+//OTHER STYLES
+@mixin header-layout{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+@mixin hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 25px;
+}
+
+@mixin archive{
+    background-color: $bg-card;
+    border: solid 1px $border-color;
+    margin-top: 30px;
+    padding: 25px;
+}
+
+@mixin for-message-system{
+    padding: 35px 35px;
+    border-bottom: solid 1px $border-color;
+}
+
+@mixin citizen-photos{
+    color: $accent-red;
+    font-size: 16px;
+    width: 260px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bg-main;
+    border: 1px solid $border-color;
+    text-align: center;
+}
+@mixin footer-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+@mixin header-info{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: auto;
+}
+
+@mixin userbid {
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $bg-main;
+        border: solid 1px $border-color;
+        padding: 12px;
+        margin-top: 10px;
+}
+
+
+
+
+//FONTS
+@mixin title-pixel{
+    font-family: "DotGothic16", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin warning-number-font{
+    font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "ELSH" 100;
+}
+@mixin regular-text{
+    font-family: "Cutive Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+
+body{
+    background-color: $bg-main;
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    @include header-layout;
+    border-bottom: solid 1px $border-color;
+    background-color: $bg-card;
+    &__logo{
+        @include title-pixel;
+        color: $text-primary;
+        letter-spacing: 2px;
+    }
+    &__status{
+        @include warning-number-font;
+        color: $accent-red;
+    }
+    &__info{
+        @include header-info;
+    }
+    &__info-system{
+        @include warning-number-font;
+        color: $accent-yellow;
+    }
+
+    &__info-database{
+        @include warning-number-font;
+        color: $accent-red;
+    }
+    &__info-sync{
+        @include warning-number-font;
+        color: $text-secondary;
+    }
+}
+
+
+.hero{
+    @include hero;
+    background-color: $bg-main;
+    &__label{
+        @include warning-number-font;
+        color: $text-secondary;
+    }
+
+    &__title{
+        @include title-pixel;
+        color: $text-primary;
+        font-size: 32px;
+        max-width: 480px;
+        letter-spacing: 1px;
+    }
+
+    &__warning{
+        font-size: 18px;
+        @include warning-number-font;
+        color: $accent-red;
+    }
+}
+
+.archive{
+    @include archive;
+    &__title{
+        @include title-pixel;
+        color: $text-primary;
+        letter-spacing: 1px;
+    }
+}
+
+.archive__filter{
+    span{
+        @include warning-number-font;
+        color: $text-secondary;
+        transition: color 0.3s;
+
+        &:hover{
+            color: $accent-yellow;
+        }
+    }
+}
+
+.citizen{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    &__photo{
+    @include warning-number-font;
+    @include citizen-photos;
+    background-color: #10100E;
+    border-color: #40372F;
+    color: $accent-red;
+    }
+   &__info {
+    display: grid;
+    grid-template-columns: 400px 600px 450px;
+    gap: 30px;
+}
+
+    &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    }
+
+    &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-left: 1px solid $border-color;
+    padding-left: 25px;
+    }
+    &__id{
+        @include warning-number-font;
+        color: $accent-yellow;
+    }
+    &__name{
+        @include title-pixel;
+        color: $text-primary;
+        letter-spacing: 1px;
+    }
+    &__status{
+        @include warning-number-font;
+        color: $text-secondary;
+    }
+    &__statStatus{
+        @include warning-number-font;
+        color: $accent-yellow;
+    }
+    &__copies{
+        @include regular-text;
+        color: $text-secondary;
+    }
+    &__copStatus{
+        @include warning-number-font;
+        color: $accent-yellow;
+    }
+    &__record{
+        @include warning-number-font;
+        color: $text-secondary;
+    }
+    &__recStatus{
+        @include warning-number-font;
+        color: $accent-yellow;
+    }
+    &__data{
+        @include warning-number-font;
+        color:$text-secondary;
+    }
+    &__dataStatus{
+        @include warning-number-font;
+        color: $accent-red;
+    }
+    &__lastUpdate{
+        @include warning-number-font;
+        color: $text-secondary;
+    }
+    &__lastStatus{
+        @include warning-number-font;
+        color: $accent-yellow;
+    }
+    &__location{
+        @include regular-text;
+        color:$text-secondary;
+    }
+    &__locStatus{
+        @include warning-number-font;
+        color: $accent-yellow;
+    }
+    &__integrity{
+        @include regular-text;
+        color: $text-secondary;
+    }
+    &__integStatus{
+        @include warning-number-font;
+        color: $accent-red;
+    }
+    &__orig{
+        @include regular-text;
+        color: $text-secondary;
+    }
+    &__origStatus{
+        @include warning-number-font;
+        color: $accent-red;
+    }
+
+    &__auction-header{
+        @include title-pixel;
+        color: $text-primary;
+    }
+
+    &__auctionPrice-text{
+        @include warning-number-font;
+        color: $text-primary;
+    }
+
+    &__auction-price{
+        @include title-pixel;
+        color: $accent-yellow;
+    }
+
+    &__auction-timer{
+        @include warning-number-font;
+        color: $accent-red;
+        font-size: 26px;
+    }
+
+    &__auction-input {
+    font-size: 16px;
+    background-color: $bg-main;
+    color: $text-primary;
+    border: solid 1px $border-color;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    -moz-appearance: textfield;
+}   
+    &__auction-input::placeholder{
+        color: $text-primary;
+    }
+    &__auction-input:focus{
+        border-color: $accent-yellow;
+        outline: none
+    }
+
+    &__auction-history{
+        @include title-pixel;
+        color: $accent-yellow;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__auction-name{
+        @include title-pixel;
+        color: $text-secondary;
+    }
+
+
+    &__auction-userBid{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $bg-main;
+        border: solid 1px $border-color;
+        padding: 12px;
+        margin-top: 10px;
+    }
+    
+    &__auction-delete{
+        @include regular-text;
+        background-color: $accent-dark;
+        color: $text-primary;
+        border: solid 1px $accent-red;
+    }
+
+    &__auction-delete:hover{
+        background-color: $accent-red;
+    }
+
+
+    &__auction-button {
+    @include warning-number-font;
+    background: $accent-dark;
+    color: $text-primary;
+    border: 1px solid $accent-red;
+    padding: 10px 14px;
+    cursor: pointer;
+    transition: 0.2s ease;
+
+    &:hover {
+        background: $accent-red;
+        color: $bg-main;
+    }
+}
+}
+
+    &__acquire{
+    @include warning-number-font;
+    background-color: $accent-dark;
+    border: 1px solid $accent-red;
+    color: $text-primary;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover{
+        background-color: $accent-red;
+        color: $text-primary
+    }
+}
+
+    &__price{
+    @include regular-text;
+    color: $text-secondary;
+
+    span{
+        color: $accent-yellow;
+    }
+}
+
+    &__auction{
+    background-color: $bg-card;
+    border: 1px solid $border-color;
+    padding: 20px;
+}
+
+
+.message{
+    @include for-message-system;
+    &__title{
+        @include title-pixel;
+        color: $text-primary;
+    }
+    &__text{
+        @include warning-number-font;
+        color: $accent-yellow;
+    }
+}
+
+.system{
+    @include for-message-system;
+    &__title{
+        @include title-pixel;
+        color: $text-secondary;
+    }
+    &__error{
+        @include warning-number-font;
+        color: $accent-red;
+    }
+    &__warning{
+        @include warning-number-font;
+        color: $accent-yellow;
+    }
+}
+
+.footer{
+    padding: 15px;
+    border: solid 1px $border-color;
+    background-color: $accent-dark;
+    &__text{
+        @include title-pixel;
+        color: $text-primary;
+    }
+    &__info{
+        @include footer-info;
+        color: $accent-red;
+    }
+}
+.archive__footer{
+    color: $text-secondary;
+    border-top: 1px solid $border-color;
+    p{
+        @include warning-number-font;
+    }
+}

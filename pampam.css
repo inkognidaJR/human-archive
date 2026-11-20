@@ -1,0 +1,518 @@
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geist+Pixel&display=swap");
+body {
+  background-color: #0D0D0B;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: solid 1px #39372F;
+  background-color: #171713;
+}
+.header__logo {
+  font-family: "DotGothic16", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #C4BDA8;
+  letter-spacing: 2px;
+}
+.header__status {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 100;
+  color: #8F2925;
+}
+.header__info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: auto;
+}
+.header__info-system {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 100;
+  color: #A18D58;
+}
+.header__info-database {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 100;
+  color: #8F2925;
+}
+.header__info-sync {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 100;
+  color: #777568;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 25px;
+  background-color: #0D0D0B;
+}
+.hero__label {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 100;
+  color: #777568;
+}
+.hero__title {
+  font-family: "DotGothic16", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #C4BDA8;
+  font-size: 32px;
+  max-width: 480px;
+  letter-spacing: 1px;
+}
+.hero__warning {
+  font-size: 18px;
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 100;
+  color: #8F2925;
+}
+
+.archive {
+  background-color: #171713;
+  border: solid 1px #39372F;
+  margin-top: 30px;
+  padding: 25px;
+}
+.archive__title {
+  font-family: "DotGothic16", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #C4BDA8;
+  letter-spacing: 1px;
+}
+
+.archive__filter span {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 100;
+  color: #777568;
+  transition: color 0.3s;
+}
+.archive__filter span:hover {
+  color: #A18D58;
+}
+
+.citizen {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+.citizen__photo {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 100;
+  color: #8F2925;
+  font-size: 16px;
+  width: 260px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0D0D0B;
+  border: 1px solid #39372F;
+  text-align: center;
+  background-color: #10100E;
+  border-color: #40372F;
+  color: #8F2925;
+}
+.citizen__info {
+  display: grid;
+  grid-template-columns: 400px 600px 450px;
+  gap: 30px;
+}
+.citizen__main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.citizen__details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-left: 1px solid #39372F;
+  padding-left: 25px;
+}
+.citizen__id {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 100;
+  color: #A18D58;
+}
+.citizen__name {
+  font-family: "DotGothic16", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #C4BDA8;
+  letter-spacing: 1px;
+}
+.citizen__status {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 100;
+  color: #777568;
+}
+.citizen__statStatus {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 100;
+  color: #A18D58;
+}
+.citizen__copies {
+  font-family: "Cutive Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  color: #777568;
+}
+.citizen__copStatus {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 100;
+  color: #A18D58;
+}
+.citizen__record {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 100;
+  color: #777568;
+}
+.citizen__recStatus {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 100;
+  color: #A18D58;
+}
+.citizen__data {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 100;
+  color: #777568;
+}
+.citizen__dataStatus {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 100;
+  color: #8F2925;
+}
+.citizen__lastUpdate {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 100;
+  color: #777568;
+}
+.citizen__lastStatus {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 100;
+  color: #A18D58;
+}
+.citizen__location {
+  font-family: "Cutive Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  color: #777568;
+}
+.citizen__locStatus {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 100;
+  color: #A18D58;
+}
+.citizen__integrity {
+  font-family: "Cutive Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  color: #777568;
+}
+.citizen__integStatus {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 100;
+  color: #8F2925;
+}
+.citizen__orig {
+  font-family: "Cutive Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  color: #777568;
+}
+.citizen__origStatus {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 100;
+  color: #8F2925;
+}
+.citizen__auction-header {
+  font-family: "DotGothic16", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #C4BDA8;
+}
+.citizen__auctionPrice-text {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 100;
+  color: #C4BDA8;
+}
+.citizen__auction-price {
+  font-family: "DotGothic16", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #A18D58;
+}
+.citizen__auction-timer {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 100;
+  color: #8F2925;
+  font-size: 26px;
+}
+.citizen__auction-input {
+  font-size: 16px;
+  background-color: #0D0D0B;
+  color: #C4BDA8;
+  border: solid 1px #39372F;
+}
+.citizen__auction-input::-webkit-inner-spin-button, .citizen__auction-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.citizen__auction-input {
+  -moz-appearance: textfield;
+}
+.citizen__auction-input::placeholder {
+  color: #C4BDA8;
+}
+.citizen__auction-input:focus {
+  border-color: #A18D58;
+  outline: none;
+}
+.citizen__auction-history {
+  font-family: "DotGothic16", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #A18D58;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.citizen__auction-name {
+  font-family: "DotGothic16", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #777568;
+}
+.citizen__auction-userBid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0D0D0B;
+  border: solid 1px #39372F;
+  padding: 12px;
+  margin-top: 10px;
+}
+.citizen__auction-delete {
+  font-family: "Cutive Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #542522;
+  color: #C4BDA8;
+  border: solid 1px #8F2925;
+}
+.citizen__auction-delete:hover {
+  background-color: #8F2925;
+}
+.citizen__auction-button {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 100;
+  background: #542522;
+  color: #C4BDA8;
+  border: 1px solid #8F2925;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.citizen__auction-button:hover {
+  background: #8F2925;
+  color: #0D0D0B;
+}
+
+.citizen__acquire {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 100;
+  background-color: #542522;
+  border: 1px solid #8F2925;
+  color: #C4BDA8;
+  transition: background-color 0.3s, color 0.3s;
+}
+.citizen__acquire:hover {
+  background-color: #8F2925;
+  color: #C4BDA8;
+}
+
+.citizen__price {
+  font-family: "Cutive Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  color: #777568;
+}
+.citizen__price span {
+  color: #A18D58;
+}
+
+.citizen__auction {
+  background-color: #171713;
+  border: 1px solid #39372F;
+  padding: 20px;
+}
+
+.message {
+  padding: 35px 35px;
+  border-bottom: solid 1px #39372F;
+}
+.message__title {
+  font-family: "DotGothic16", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #C4BDA8;
+}
+.message__text {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 100;
+  color: #A18D58;
+}
+
+.system {
+  padding: 35px 35px;
+  border-bottom: solid 1px #39372F;
+}
+.system__title {
+  font-family: "DotGothic16", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #777568;
+}
+.system__error {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 100;
+  color: #8F2925;
+}
+.system__warning {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 100;
+  color: #A18D58;
+}
+
+.footer {
+  padding: 15px;
+  border: solid 1px #39372F;
+  background-color: #542522;
+}
+.footer__text {
+  font-family: "DotGothic16", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #C4BDA8;
+}
+.footer__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  color: #8F2925;
+}
+
+.archive__footer {
+  color: #777568;
+  border-top: 1px solid #39372F;
+}
+.archive__footer p {
+  font-family: "Geist Pixel", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 100;
+}
+
+/*# sourceMappingURL=pampam.css.map */
